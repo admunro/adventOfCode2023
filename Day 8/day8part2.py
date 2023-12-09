@@ -1,6 +1,5 @@
 import re
 import math
-import array as arr
 
 
 
@@ -61,12 +60,10 @@ def get_path_frequency(node, instructions):
 
 if __name__ == "__main__":
 
-    #instructions, nodes = get_input('test2Input.txt')
     instructions, nodes = get_input('input.txt')
 
     starting_nodes = Node.get_nodes_ending_in('A')
 
     path_lengths = [get_path_frequency(node, instructions) for node in starting_nodes]
 
-    pass
     print('Answer: ' + str(math.lcm(*path_lengths)))
