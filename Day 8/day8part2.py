@@ -24,10 +24,6 @@ class Node:
         elif direction == 'R':
             return Node.all_nodes[self.right]
 
-def get_node_endings(nodes):
-
-    return [node.location[2] for node in nodes]
-
 def get_input(filename):
     with open(filename) as inputFile:
         raw_input = [(line.strip()) for line in inputFile]
